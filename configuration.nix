@@ -42,8 +42,8 @@ in
   services.xserver.enable = true;
 
   # Enable the plasma6 Desktop environment.
-  services.xserver.displayManager.lightdm.enable = true;
-  services.xserver.desktopManager.plasma6.enable = true;
+  services.displayManager.lightdm.enable = true;
+  services.desktopManager.plasma6.enable = true;
   services.xserver.displayManager.setupCommands = ''
     RIGHT='HDMI-0'
     LEFT='DP-0'
@@ -178,6 +178,8 @@ in
     filezilla
     android-studio
     p7zip
+    qdirstat
+    jetbrains.webstorm
     (pkgs.discord.override {
       withVencord = true;
     }) 
@@ -185,8 +187,6 @@ in
 
   programs.git = {
     enable = true;
-    userName = "bruggoli";
-    userEmail = "marmomag@gmail.com";
   };
 
 
