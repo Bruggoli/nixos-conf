@@ -42,7 +42,7 @@ in
   services.xserver.enable = true;
 
   # Enable the plasma6 Desktop environment.
-  services.displayManager.lightdm.enable = true;
+  services.xserver.displayManager.lightdm.enable = true;
   services.desktopManager.plasma6.enable = true;
   services.xserver.displayManager.setupCommands = ''
     RIGHT='HDMI-0'
@@ -180,6 +180,7 @@ in
     p7zip
     qdirstat
     jetbrains.webstorm
+    kwalletcli
     (pkgs.discord.override {
       withVencord = true;
     }) 
