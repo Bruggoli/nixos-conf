@@ -180,7 +180,6 @@ in
     p7zip
     qdirstat
     jetbrains.webstorm
-    kwalletcli
     (pkgs.discord.override {
       withVencord = true;
     }) 
@@ -190,6 +189,7 @@ in
     enable = true;
   };
 
+  security.pam.services.sddm.enableKwallet = true;
 
  
   fonts.packages = with pkgs; [
